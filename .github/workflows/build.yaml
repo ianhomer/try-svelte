@@ -1,0 +1,30 @@
+name: build
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - name: Use Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20.
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3.0.0
+        with:
+          version: 8.15.5
+      - name: install and lint
+        run: |
+          pnpm install
+          pnpm lint
+      - name: test
+        run: |
+          pnpm test
+      - name: build
+        run: |
+          pnpm build
