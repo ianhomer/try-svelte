@@ -1,5 +1,6 @@
 <script>
   import Component from "./component.svelte";
+  import Hello from "./hello.svelte";
   const foo = 1;
 
   let count = 0;
@@ -23,6 +24,7 @@
   {count === 1 ? "time" : "times"}
 </button>
 <Component />
+<Hello />
 
 <style>
   p.foo {
