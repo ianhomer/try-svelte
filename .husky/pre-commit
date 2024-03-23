@@ -1,2 +1,3 @@
-pnpm lint:fix
+export CI=true
+pnpx lint-staged
 pnpm test
