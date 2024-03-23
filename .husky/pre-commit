@@ -1,3 +1,4 @@
 export CI=true
 pnpx lint-staged
 pnpm test
+pnpm build

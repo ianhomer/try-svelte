@@ -26,6 +26,8 @@
 <Component />
 <Greeter />
 
+<a href="/transition">Transition</a>
+
 <style>
   p.foo {
     color: purple;
